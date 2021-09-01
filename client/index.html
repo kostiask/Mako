@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Ontology</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="src/css/app.css" rel="stylesheet">
+    <script type="text/javascript" src="node_modules/web3/dist/web3.min.js"></script>
+    <script type="text/javascript" src="node_modules/truffle-contract/dist/truffle-contract.min.js"></script>
+
+    <style>
+      #options{
+          height: 40px;
+          width: 90%;
+          font-size: 1.2em;
+      }
+      #selecttag{
+          font-size: 1.7em;
+      }
+      #submit{
+        width: 20%;
+        display: block;
+        margin: 20px auto;
+      }
+      /*.select, .send, #all-accounts{
+          display: none;
+      }
+      .active{
+          display: block !important;
+      }*/
+    </style>
+
+  </head>
+  <body>  
+    <div class="container-fluid">
+      <div class="row">
+       
+        <div class="col-md-10 col-md-offset-1">
+          <div class="send" style="border-bottom: 1px solid black; padding-bottom: 20px;">
+            
+            <h3 id="selecttag">Upload ontology</h3>
+            <h4>Enter IRI ontology:</h4>
+            <input type="text" id='address1' style="width: 700px; display: block; margin-bottom: 20px;">
+             <h4>Ontology:</h4>
+            <textarea type="textarea" id='index1' style="width: 700px;height: 300px; display: block; margin-bottom: 20px;"></textarea>
+            <button id="send1" class="btn btn-primary" style="display:inline-block;">UPLOAD TO SMART CONTRACT</button>
+            <h4 >Status: <span id="status1" style="color:green;"> </span></h4>
+          </div>
+        </div>
+
+        <div class="col-md-10 col-md-offset-1">
+          <div class="send" style="border-bottom: 1px solid black; padding-bottom: 20px;">
+            <h3 id="selecttag">Check rdf</h3>
+            <h4>Enter IRI ontology:</h4>
+            <input type="text" id='address2' style="width: 700px; display: block; margin-bottom: 20px;">
+           
+            <div style="display: flex; flex-direction: row;">
+              <div>
+                <h4>RDF:</h4>
+                <textarea type="textarea" id='index2' style=" width: 700px;height: 300px; display: block; margin-bottom: 20px; margin-right: 20px;"></textarea>
+              </div>
+              <div>
+                <h4>Result:</h4>
+                  <textarea type="textarea" id='index3' style=" width: 700px;height: 300px; display: block; margin-bottom: 20px;"></textarea>
+              </div>
+            </div >
+            
+            <button id="send2" class="btn btn-primary" style="display:inline-block;">CHECK</button>
+            <h4 >Status: <span id="status2" style="color:green;"> </span></h4>
+          </div>
+        </div>
+
+      </div>
+    </div>
+   
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="src/app.js"></script>
+  </body>
+</html>
