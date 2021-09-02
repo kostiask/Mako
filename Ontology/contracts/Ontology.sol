@@ -11,7 +11,7 @@ contract Ontology {
         string[] memory tmp = split(_ontology_terms);
         if(ontologies[_ontology_IRI].length > 0){
             for(uint256 i = 0; i < tmp.length; i++){
-                delete ontologies[_ontology_IRI];
+                delete ontologies[_ontology_IRI][i];
             }
 
         }
