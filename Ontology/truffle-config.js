@@ -24,9 +24,9 @@
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
 
-const PrivateKeyProvider = require("@truffle/hdwallet-provider");
-const privateKey = "0xae6ae8e5ccbfb04590405997ee2d52d2b330726137b875053c36d94e974d162f";
-const privateKeyProvider = new PrivateKeyProvider(privateKey, "http://127.0.0.1:8545");
+// const PrivateKeyProvider = require("@truffle/hdwallet-provider");
+// const privateKey = "0xae6ae8e5ccbfb04590405997ee2d52d2b330726137b875053c36d94e974d162f";
+// const privateKeyProvider = new PrivateKeyProvider(privateKey, "http://127.0.0.1:8545");
 
 
 module.exports = {
@@ -41,10 +41,10 @@ module.exports = {
    */
 
   networks: {
-    besuWallet: {
-      provider: privateKeyProvider,
-      network_id: "*"
-    },
+    // besuWallet: {
+    //   provider: privateKeyProvider,
+    //   network_id: "*"
+    // },
     development: {
       host: "127.0.0.1",
       port: 7545,
