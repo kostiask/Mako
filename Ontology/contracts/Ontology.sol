@@ -9,14 +9,13 @@ contract Ontology {
 
     function upload_ontology(string memory _ontology_IRI, string memory _ontology_terms) public {
         string[] memory tmp = split(_ontology_terms);
-        // if(ontologies[_ontology_IRI].length > 0){
-        //     for(uint256 i = 0; i < tmp.length; i++){
-        //         ontologies[_ontology_IRI].push(tmp[i]) - 1;
-        //     }
-        // }
-        // else {
-            ontologies[_ontology_IRI] = tmp;
-        // }
+        if(ontologies[_ontology_IRI].length > 0){
+            for(uint256 i = 0; i < tmp.length; i++){
+                delete ontologies[_ontology_IRI];
+            }
+
+        }
+        ontologies[_ontology_IRI] = tmp;
     }
 
     function check_rdf(string memory _ontology_IRI, string memory _rdf_terms) public view returns(string memory){
